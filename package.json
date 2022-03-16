@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "test": "jest",
-    "dev": "nodemon ./src/server.ts"
+    "test": "jest --coverage",
+    "dev": "nodemon ./src/server.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
