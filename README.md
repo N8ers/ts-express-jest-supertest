@@ -52,3 +52,41 @@
 
 - app.ts
 - server.ts
+
+### OTHER READ ME
+
+1. init project & imports
+   `npm init -y`
+   `npm i express`
+   `npm i --save-dev typescript supertest nodemon jest ts-jest ts-node @types/jest @types/supertest @types/express`
+
+1. configure `package.json`
+
+1. init TS
+   `npx tsc --init`
+
+1. init Jest
+   `npx ts-jest config:init`
+
+1. Create a basic Express app with TypeScript
+   create an app.ts
+   create a server.ts
+   create a basic app.ts level route
+
+- test this in the browser
+
+create a routes dir and a user route in there
+pull those into app.ts
+
+- test this in the browser
+
+1. Use Jest and Supertest to test your app
+
+- in the root of your project, create a **tests** dir (this is a convension, explain why)
+- in that dir, recreate your project setup
+- in the server.test.ts file, we will create a quick test to show jest intagration
+- then do first route test for the catch all route
+- then do the users route
+
+- what is the terminal command to run just one jest test?
+- where should i keep the **tests** folder in a TS project?
