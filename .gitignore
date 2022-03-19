@@ -1,3 +1,9 @@
 node_modules
 
 coverage
+
+jest.config.js
+
+todo.txt
+
+dist
