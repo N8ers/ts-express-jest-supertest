@@ -14,12 +14,19 @@
 
 ```json
 {
+  "exclude": ["./coverage", "./dist", "__tests__", "jest.config.js"],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  },
   "compilerOptions": {
+    /* Projects */
+
     /* Language and Environment */
     "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
 
     /* Modules */
-    // "module": "esnext" /* Specify what module code is generated. */,
+    "module": "commonjs" /* Specify what module code is generated. */,
     "rootDir": "./src" /* Specify the root folder within your source files. */,
     "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
 
@@ -29,14 +36,14 @@
 
     /* Emit */
     "outDir": "./dist" /* Specify an output folder for all emitted files. */,
+
+    /* Interop Constraints */
     "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
 
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
     "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
-
-    /* Completeness */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   }
 }
