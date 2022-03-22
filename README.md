@@ -53,12 +53,31 @@
 
 `npx ts-jest config:init`
 
+```js
+module.exports = {
+  preset: "ts-jest",
+  testEnvironment: "node",
+};
+```
+
 ## Configure `pacakge.json`
+
+```js
+"scripts": {
+   "test": "jest --coverage",
+   "dev": "nodemon ./src/server.ts",
+   "build": "tsc"
+}
+```
 
 ## Create basic Express app With TypeScript
 
 - app.ts
 - server.ts
+
+## .gitignore
+
+add the following because you don't wanna muck up git
 
 ### OTHER READ ME
 
