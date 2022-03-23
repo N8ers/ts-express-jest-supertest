@@ -2,9 +2,9 @@
 
 ## Init project & import imports
 
-- create dir and init project `npm init -y`
-- import deps `npm i express`
-- import dev-deps `npm i --save-dev typescript supertest nodemon jest ts-jest ts-node @types/jest @types/supertest @types/express`
+- Create directory and inititialize a new project `npm init -y`
+- Import dependencies `npm i express`
+- import dev-dependencies `npm i --save-dev typescript supertest nodemon jest ts-jest ts-node @types/jest @types/supertest @types/express`
 
 ## Init TypeScript
 
@@ -20,31 +20,18 @@
     "files": true
   },
   "compilerOptions": {
-    /* Projects */
-
-    /* Language and Environment */
-    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-
-    /* Modules */
-    "module": "commonjs" /* Specify what module code is generated. */,
-    "rootDir": "./src" /* Specify the root folder within your source files. */,
-    "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
-
-    /* JavaScript Support */
-    // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
-    "checkJs": true /* Enable error reporting in type-checked JavaScript files. */,
-
-    /* Emit */
-    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
-
-    /* Interop Constraints */
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
-    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-
-    /* Type Checking */
-    "strict": true /* Enable all strict type-checking options. */,
-    "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+    "target": "es2016",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    // "allowJs": true,
+    "checkJs": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
   }
 }
 ```
@@ -62,6 +49,8 @@ module.exports = {
 
 ## Configure `pacakge.json`
 
+Make sure your script section includes the following.
+
 ```js
 "scripts": {
    "test": "jest --coverage",
@@ -73,11 +62,29 @@ module.exports = {
 ## Create basic Express app With TypeScript
 
 - app.ts
+
+```ts
+function dontForgetToShowSomethingHere();
+```
+
 - server.ts
 
-## .gitignore
+```ts
+function dontForgetToShowSomethingHere();
+```
+
+## Add a .gitignore
 
 add the following because you don't wanna muck up git
+TODO: explain why we want to ignore coverage, jest.config.js, and dist
+
+```
+node_modules
+coverage
+jest.config.js
+todo.txt
+dist
+```
 
 ### OTHER READ ME
 
@@ -99,7 +106,7 @@ add the following because you don't wanna muck up git
    create a server.ts
    create a basic app.ts level route
 
-- test this in the browser
+   - test this in the browser
 
 create a routes dir and a user route in there
 pull those into app.ts
