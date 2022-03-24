@@ -10,7 +10,7 @@
 
 `npx tsc --init`
 
-## Configure tsconfig.json
+The above command will generate a `tsconfig.json` file. You'll want to modify it with the below. Not every item is nessessary, feel free to further configure it to match your needs.
 
 ```json
 {
@@ -40,6 +40,8 @@
 
 `npx ts-jest config:init`
 
+The above command will generate a `jest.config.js` file. You'' want to modify it with the below.
+
 ```js
 module.exports = {
   preset: "ts-jest",
@@ -64,13 +66,29 @@ Make sure your script section includes the following.
 - app.ts
 
 ```ts
-function dontForgetToShowSomethingHere();
+import express, { Application, Request, Response, NextFunction } from "express";
+
+import { router as userRoutes } from "./routes/user.routes";
+
+const app: Application = express();
+
+app.use("/users", userRoutes);
+
+app.use("/", (req: Request, res: Response, next: NextFunction): void => {
+  res.json({ message: "Allo! Catch-all route." });
+});
+
+export default app;
 ```
 
 - server.ts
 
 ```ts
-function dontForgetToShowSomethingHere();
+import app from "./app";
+
+const PORT: Number = 5050;
+
+app.listen(PORT, (): void => console.log(`running on port ${PORT}`));
 ```
 
 ## Add a .gitignore
