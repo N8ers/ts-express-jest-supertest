@@ -1,5 +1,7 @@
 # ts-express-jest-supertest
 
+This is a supplamental repo for [this article on dev.to](https://dev.to/nathan_sheryak/how-to-test-a-typescript-express-api-with-jest-for-dummies-like-me-4epd).
+
 ## Init project & import imports
 
 - Create directory and inititialize a new project `npm init -y`
