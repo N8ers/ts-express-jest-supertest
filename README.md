@@ -49,18 +49,6 @@ module.exports = {
 };
 ```
 
-## Configure `pacakge.json`
-
-Make sure your script section includes the following.
-
-```js
-"scripts": {
-   "test": "jest --coverage",
-   "dev": "nodemon ./src/server.ts",
-   "build": "tsc"
-}
-```
-
 ## Create basic Express app With TypeScript
 
 - app.ts
@@ -90,6 +78,37 @@ const PORT: Number = 5050;
 
 app.listen(PORT, (): void => console.log(`running on port ${PORT}`));
 ```
+
+- user.routes.ts
+
+```ts
+import { Router, Request, Response } from "express";
+
+const router = Router();
+
+router.get("/", (req: Request, res: Response): void => {
+  let users = ["Goon", "Tsuki", "Joe"];
+  res.status(200).send(users);
+});
+
+export { router };
+```
+
+## Configure `pacakge.json`
+
+Make sure your script section includes the following.
+
+```js
+"scripts": {
+   "test": "jest --coverage",
+   "dev": "nodemon ./src/server.ts",
+   "build": "tsc"
+}
+```
+
+## Making sure our API is working
+
+## Writing our tests
 
 ## Add a .gitignore
 
